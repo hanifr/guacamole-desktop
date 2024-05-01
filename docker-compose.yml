@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  guacamole:
+    image: abesnier/guacamole
+    container_name: guaca-mole
+    volumes:
+      - postgres:/config
+    ports:
+      - "8008:8080"
+volumes:
+  postgres:
+    driver: local
